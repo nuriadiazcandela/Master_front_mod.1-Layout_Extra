@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+header {
+  .page-title {
+    background-color: #d8e404;
+    padding: 20px 15px;
+    color: white;
+    font-weight: bold;
+  }
+  .toolbar {
+    display: none;
+  }
+}
+.page-container {
+  position: relative;
+  nav {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+    .menu-container {
+      .menu-title {
+        display: none;
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        background-color: #484404;
+        padding: 8px;
+
+        li {
+          background-color: #f8f4f4;
+          padding: 8px;
+          width: 22%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+main {
+  position: relative;
+  background-color: #f8f4f4;
+  .list {
+    padding: 20px;
+    .card {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+      padding: 8px;
+      background-color: white;
+      border: 1px solid #e6edc2;
+      .member-name {
+        padding-left: 10px;
+      }
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+}
+footer {
+  background-color: #e6edc2;
+  padding: 15px;
+}
+@media screen and (min-width: 768px) {
+  header {
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      align-items: center;
+      input {
+        padding: 5px;
+      }
+    }
+    .page-title {
+      font-size: 20px;
+    }
+  }
+  .page-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: end;
+    nav {
+      width: 250px;
+      height: 100vh;
+      background-color: #484404;
+      top: 0;
+      bottom: 0;
+      .menu-container {
+        .menu-title {
+          display: inline-block;
+          color: white;
+          text-transform: uppercase;
+          padding: 8px 15px;
+          text-align: center;
+        }
+        ul {
+          flex-direction: column;
+          padding: 0;
+          li {
+            width: inherit;
+            text-align: left;
+            border: 1px solid #b6aa03;
+            &:hover {
+              background-color: #b6aa03;
+              color: white;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    main {
+      width: calc(100% - 250px);
+      .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 30px 50px 50px 50px;
+        .card {
+          flex-direction: column;
+          width: 230px;
+          height: 190px;
+          margin: 0 25px 15px 0;
+          border: 1px solid #484404;
+          border-radius: 5px;
+          justify-content: center;
+          .member-name {
+            padding-top: 15px;
+          }
+        }
+      }
+    }
+  }
+}
